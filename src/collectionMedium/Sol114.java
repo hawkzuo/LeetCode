@@ -7,7 +7,7 @@ package collectionMedium;
  */
 public class Sol114 {
     private TreeNode prev=null;
-    
+
     public void flatten(TreeNode root) {
         rlmV(root);
     }

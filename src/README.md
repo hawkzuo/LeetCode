@@ -1,3 +1,3 @@
-# java_leetcode_repository_windows
+# LeetCode
 
 Java implementation of some problems on Leetcode.com.
