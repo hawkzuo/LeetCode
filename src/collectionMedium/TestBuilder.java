@@ -7,5 +7,7 @@ public class TestBuilder {
 
 
     public static void main(String[] args) {
+        Sol s = new Sol();
+        System.out.println();
     }
 }
