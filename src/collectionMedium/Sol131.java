@@ -38,6 +38,7 @@ public class Sol131 {
             for(int i=0;i<str.length;i++){
                 String prefix = s.substring(0,i+1);
                 if(!isPa(prefix)) { continue;}
+                // This control flow must be added due to calling s.substring(i+1)
                 if(i+1 == str.length) {
                     // prefix = allString
                     List<String> fullLength = new ArrayList<>();
