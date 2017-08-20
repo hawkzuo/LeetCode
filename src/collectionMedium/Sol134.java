@@ -10,6 +10,9 @@ public class Sol134 {
         // [-1 0 0] [-1 9 2 13 1] [-1 10 -2 8 1]
         // [0 3 0 0 0]
 
+        // [-4, 2, -1, 10, -7]
+        // {-4 -2 -3 7 0}           // The answer is not '10' but '2'
+
         //[-1 10 -6 -6 4 -5 4]
         //[-1 9 3 -3 1 -4 0]
 
@@ -27,10 +30,12 @@ public class Sol134 {
             total += gas[i] - cost[i];
             if(remaining < 0) {
                 // meaning this stored 'startIndex' cannot be chosen
+                // not only 'startIndex' but all other indices between startIndex & i cannot be chosen
                 remaining = 0;
                 startIndex = i;
             }
         }
+        // Use the fact that solution exists if and only if total >= 0
         return (total < 0) ? -1 : startIndex + 1;
     }
 }
