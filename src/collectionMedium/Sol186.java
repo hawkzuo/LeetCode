@@ -8,15 +8,15 @@ public class Sol186 {
     public void reverseWords(char[] s) {
         int len = s.length;
         rotatechar(s,0,len-1);
-        int bindex = 0;
+        int beginIndex = 0;
         for(int i=0;i<len;i++){
             if(s[i] == ' '){
-                rotatechar(s,bindex,i-1);
-                bindex = i+1;
+                rotatechar(s, beginIndex, i-1);
+                beginIndex = i+1;
             }
         }
-        if (bindex <= len) {
-            rotatechar(s,bindex,len-1);
+        if (beginIndex <= len) {
+            rotatechar(s, beginIndex, len-1);
         }
     }
 

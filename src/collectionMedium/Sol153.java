@@ -15,10 +15,10 @@ public class Sol153 {
 
         int len = nums.length;
         int res;
-        res = rSearch(nums,0,len-1);
+        res = rotateSearch(nums,0,len-1);
         return res;
     }
-    private int rSearch(int[] nums, int left, int right){
+    private int rotateSearch(int[] nums, int left, int right){
 
         if(nums[left] < nums[right]){
             return nums[left];
@@ -30,9 +30,9 @@ public class Sol153 {
             return Math.min(nums[left], nums[right]);
         }else{
             if(nums[mid] > nums[left]){
-                return rSearch(nums,mid,right);
+                return rotateSearch(nums,mid,right);
             }else if(nums[mid] < nums[right]){
-                return rSearch(nums,left,mid);
+                return rotateSearch(nums,left,mid);
             }else{
                 return -1;
             }

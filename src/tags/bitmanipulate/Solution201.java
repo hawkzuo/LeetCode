@@ -62,7 +62,7 @@ public class Solution201 {
     	
     	Solution201 s = new Solution201();
 
-    	int res = s.rangeBitwiseAnd(3, 2);
+    	int res = s.rangeBitwiseAnd(5, 7);
 
     	System.out.print(res);
 
