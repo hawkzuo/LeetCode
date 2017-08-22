@@ -1,4 +1,4 @@
-package collectionEasy;
+package collectionMediumSecondHundred;
 
 import collectionMediumFirstHundred.Sol;
 

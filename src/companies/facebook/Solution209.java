@@ -29,8 +29,8 @@ public class Solution209 {
                 cur++;
             }
         }
-        if(cur > nums.length)	 return best;        
-        if(best == 0)	best = cur;
+        if(cur > nums.length)	 return best;
+        best = cur;
         
         //Now loop
         int cursor = nums.length-1; int offset=0;

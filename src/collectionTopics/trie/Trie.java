@@ -39,8 +39,17 @@ public class Trie {
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
-        TrieNode correctNode = bruteVisit(word);
+        TrieNode correctNode = exactSearch(word);
         return correctNode != null && correctNode.includeSelf;
+    }
+
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+    public boolean wildcardSearch(String word) {
+        if(word == null || word.length() == 0 ){    return true;}
+
+        char[] str = word.toCharArray();
+
+        return wildSearchHelper(str, 0, root);
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
@@ -49,7 +58,7 @@ public class Trie {
             return true;
         }
 
-        TrieNode correctNode = bruteVisit(prefix);
+        TrieNode correctNode = exactSearch(prefix);
         return correctNode != null;
     }
 
@@ -60,7 +69,7 @@ public class Trie {
         List<String> res = new ArrayList<>();
         if(prefix == null || prefix.length() == 0) {    return res;}
 
-        TrieNode correctNode = bruteVisit(prefix);
+        TrieNode correctNode = exactSearch(prefix);
         if(correctNode == null) {   return res;}
 
         StringBuilder sb = new StringBuilder(prefix);
@@ -83,7 +92,7 @@ public class Trie {
         List<String> res = new ArrayList<>();
         if(prefix == null || prefix.length() == 0) {    return res;}
 
-        TrieNode correctNode = bruteVisit(prefix);
+        TrieNode correctNode = exactSearch(prefix);
         if(correctNode == null) {   return res;}
 
         StringBuilder sb = new StringBuilder(prefix);
@@ -102,8 +111,8 @@ public class Trie {
         return res;
     }
 
-    /** Going deeper through the dictionary */
-    private TrieNode bruteVisit(String word) {
+    /** Brute-force searching with exact matching  */
+    private TrieNode exactSearch(String word) {
         char[] str = word.toCharArray();
         TrieNode current = root;
         for (char step : str) {
@@ -116,7 +125,31 @@ public class Trie {
         return current;
     }
 
-    /** Use DFS to form all the words without bound*/
+    /** DFS Helper for searching with wildcard matching */
+    private boolean wildSearchHelper(char[] str, int curIndex, TrieNode current) {
+
+        if(curIndex == str.length) {
+            return current.includeSelf;
+        }
+
+        char stepChar = str[curIndex];
+        boolean result = false;
+
+        if(stepChar == '.') {
+            for(TrieNode posNext: current.children) {
+                if(posNext == null) {   continue;}
+                result |= wildSearchHelper(str, curIndex + 1, posNext);
+            }
+        } else {
+            TrieNode posNext = current.children[stepChar - 'a'];
+            if(posNext != null) {
+                result = wildSearchHelper(str, curIndex + 1, posNext);
+            }
+        }
+        return result;
+    }
+
+    /** Use DFS to form all the words without bound */
     private void dfsVisit(List<String> res, StringBuilder path, TrieNode root) {
         path.append(root.val);
         if(root.includeSelf) {
