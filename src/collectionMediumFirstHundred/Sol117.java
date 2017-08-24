@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.TreeLinkNode;
+
 /**
  * Created by Amos on 2017/7/31.
  * Populating Next Right Pointers in Each Node II

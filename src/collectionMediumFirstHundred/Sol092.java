@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.ListNode;
+
 /**
  * Created by Amos on 2017/7/26.
  * Reverse Linked List II

@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.UndirectedGraphNode;
+
 import java.util.*;
 
 /**

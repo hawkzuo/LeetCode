@@ -1,6 +1,6 @@
 package collectionMediumSecondHundred;
 
-import collectionMediumFirstHundred.Sol;
+import collectionUtils.Sol;
 
 /**
  * Created by Amos on 2017/7/13.

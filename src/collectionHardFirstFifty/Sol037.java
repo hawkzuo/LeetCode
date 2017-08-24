@@ -1,4 +1,4 @@
-package collectionHard;
+package collectionHardFirstFifty;
 
 /**
  * Sudoku Solver

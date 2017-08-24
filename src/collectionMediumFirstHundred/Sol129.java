@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.TreeNode;
+
 /**
  * Created by Amos on 2017/7/31.
  * Sum Root to Leaf Numbers

@@ -1,5 +1,7 @@
 package collectionMediumSecondHundred;
 
+import collectionUtils.TrieNode;
+
 /**
  * Created by Amos on 2017/8/22.
  * Add and Search Word - Data structure design

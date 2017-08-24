@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.TreeNode;
+
 /**
  * Created by Amos on 2017/8/10.
  * Binary Tree Upside Down

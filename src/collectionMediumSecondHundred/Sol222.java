@@ -1,5 +1,7 @@
 package collectionMediumSecondHundred;
 
+import collectionUtils.TreeNode;
+
 /**
  * Created by Amos on 2017/8/22.
  * Count Complete Tree Nodes

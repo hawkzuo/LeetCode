@@ -1,5 +1,8 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.ListNode;
+import collectionUtils.TreeNode;
+
 /**
  * Created by Amos on 2017/7/30.
  * Convert Sorted List to Binary Search Tree

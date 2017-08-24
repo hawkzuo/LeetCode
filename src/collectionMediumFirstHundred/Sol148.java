@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.ListNode;
+
 /**
  * Created by Amos on 2017/8/10.
  * Sort List

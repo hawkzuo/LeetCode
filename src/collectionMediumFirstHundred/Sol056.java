@@ -1,5 +1,7 @@
 package collectionMediumFirstHundred;
 
+import collectionUtils.Interval;
+
 import java.util.*;
 
 /**

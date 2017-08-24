@@ -1,4 +1,4 @@
-package collectionHard;
+package collectionHardFirstFifty;
 
 /**
  * Created by Amos on 2017/7/31.

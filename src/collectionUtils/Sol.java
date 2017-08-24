@@ -1,4 +1,4 @@
-package collectionMediumFirstHundred;
+package collectionUtils;
 
 /**
  * Created by Amos on 2017/7/27.
