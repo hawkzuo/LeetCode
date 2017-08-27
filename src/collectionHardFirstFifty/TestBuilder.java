@@ -1,4 +1,4 @@
-package collectionEasyFirstHundred;
+package collectionHardFirstFifty;
 
 import collectionUtils.Sol;
 
