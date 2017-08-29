@@ -5,47 +5,13 @@ import java.util.Deque;
 
 /**
  * Created by Amos on 2017/8/28.
- * Maximal Rectangle
+ * Largest Rectangle in Histogram
  */
-public class Sol085 {
-    // Idea: Run N-times Sol084 method
-    public int maximalRectangle(char[][] matrix) {
-        // Annoying control flow of 2D matrix
-        if(matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {   return 0; }
-
-        int rows = matrix.length;   int cols = matrix[0].length;
-        int[] heights = new int[rows];
-        int globalMax = 0;
-        // Loop over all the columns
-        for(int cursor=0; cursor<cols; cursor++) {
-            // Refresh heights
-            for(int i=0; i<rows; i++) {
-
-                if(heights[i] == 0) {
-                    searchRow(matrix, heights, i, cursor, cols);
-                } else {
-                    heights[i] -= 1;
-                }
-            }
-            globalMax = Math.max(globalMax, largestRectangleArea(heights));
-        }
-        return globalMax;
-    }
-
-    private void searchRow(char[][] matrix, int[] heights, int rowNumber, int colStart, int cols) {
-        int value = 0;
-        while(colStart < cols) {
-            if(matrix[rowNumber][colStart] == '1') {
-                value ++;
-                colStart ++;
-            } else {
-                break;
-            }
-        }
-        heights[rowNumber] = value;
-    }
-
-    private int largestRectangleArea(int[] heights) {
+public class Sol084 {
+    // Idea: Reference Link: https://aaronice.gitbooks.io/lintcode/content/data_structure/largest_rectangle_in_histogram.html
+    // Key idea is every step rectangle width can be calculated via i-s.peek()-1, even though they are not directly connected
+    // Also, once pop out from the stack, the values will never be used again.
+    public int largestRectangleArea(int[] heights) {
         if(heights == null || heights.length == 0) {    return 0;}
         int globalMax = 0;
         // Stack stores the index of non-decreasing elements
@@ -77,14 +43,10 @@ public class Sol085 {
     }
 
     public static void main(String[] args) {
-        Sol085 s = new Sol085();
+        Sol084 s = new Sol084();
         int[] A = {6,6,3,7,4};
         int[] B = {};
         StringBuilder sb = new StringBuilder();
-        char[][] matrix = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
-        char[][] matrix2 = {};
-        System.out.println(s.maximalRectangle(matrix2));
+        System.out.println(s.largestRectangleArea(A));
     }
-
-
 }
