@@ -20,7 +20,6 @@ public class Sol085 {
         for(int cursor=0; cursor<cols; cursor++) {
             // Refresh heights
             for(int i=0; i<rows; i++) {
-
                 if(heights[i] == 0) {
                     searchRow(matrix, heights, i, cursor, cols);
                 } else {
@@ -32,12 +31,12 @@ public class Sol085 {
         return globalMax;
     }
 
-    private void searchRow(char[][] matrix, int[] heights, int rowNumber, int colStart, int cols) {
+    private void searchRow(char[][] matrix, int[] heights, int rowNumber, int colCursor, int cols) {
         int value = 0;
-        while(colStart < cols) {
-            if(matrix[rowNumber][colStart] == '1') {
+        while(colCursor < cols) {
+            if(matrix[rowNumber][colCursor] == '1') {
                 value ++;
-                colStart ++;
+                colCursor ++;
             } else {
                 break;
             }
