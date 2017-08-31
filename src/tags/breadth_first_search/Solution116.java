@@ -2,6 +2,8 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.TreeLinkNode;
+
 public class Solution116 {
 
 	public Solution116() {

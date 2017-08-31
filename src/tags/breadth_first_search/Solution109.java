@@ -2,6 +2,9 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.ListNode;
+import collectionUtils.TreeNode;
+
 public class Solution109 {
 
     private ListNode cur=null;

@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 public class Solution083 {
 
     public ListNode deleteDuplicates(ListNode head) {

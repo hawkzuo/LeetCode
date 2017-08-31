@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 import java.util.Arrays;
 
 public class Solution148 {

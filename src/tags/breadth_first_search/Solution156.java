@@ -2,6 +2,8 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.TreeNode;
+
 public class Solution156 {
 	    private TreeNode prev=null;
 	    private TreeNode nroot=null;

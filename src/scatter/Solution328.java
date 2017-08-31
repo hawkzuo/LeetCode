@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 public class Solution328 {
 
     public ListNode oddEvenList(ListNode head) {

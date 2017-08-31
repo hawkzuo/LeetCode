@@ -3,6 +3,8 @@
 //Divide and Conquer
 package tags.breadth_first_search;
 
+import collectionUtils.TreeNode;
+
 public class Solution100 {
 
 	public Solution100() {

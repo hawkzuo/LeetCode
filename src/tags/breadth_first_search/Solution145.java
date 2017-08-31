@@ -2,6 +2,8 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,23 +18,49 @@ public class Solution145 {
 		// TODO Auto-generated constructor stub
 	}
     public List<Integer> postorderTraversal2s(TreeNode root) {
-	LinkedList<Integer> ans = new LinkedList<>();
-	Stack<TreeNode> stack = new Stack<>();
-	if (root == null) return ans;
-	
-	stack.push(root);
-	while (!stack.isEmpty()) {
-		TreeNode cur = stack.pop();
-		ans.addFirst(cur.val);
-		if (cur.left != null) {
-			stack.push(cur.left);
+		LinkedList<Integer> ans = new LinkedList<>();
+		Stack<TreeNode> stack = new Stack<>();
+		if (root == null) return ans;
+
+		stack.push(root);
+		while (!stack.isEmpty()) {
+			TreeNode cur = stack.pop();
+			ans.addFirst(cur.val);
+			if (cur.left != null) {
+				stack.push(cur.left);
+			}
+			if (cur.right != null) {
+				stack.push(cur.right);
+			}
 		}
-		if (cur.right != null) {
-			stack.push(cur.right);
-		} 
-	}
-	return ans;       
+		return ans;
     }
+
+    public List<Integer> postorderT3(TreeNode root) {
+		List<Integer> res = new ArrayList<Integer>();
+		if(root == null){	return res;}
+
+		Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+		stack.push(root);	res.add(root.val);
+
+		while(!stack.isEmpty()){
+            TreeNode step = stack.pop();
+            pushRight(res, step.left, stack);
+		}
+        return res;
+	}
+
+    private void pushRight(List<Integer> res, TreeNode cur, Deque<TreeNode> stack) {
+	    while(cur != null) {
+	        res.add(cur.val);
+	        stack.push(cur);
+	        cur = cur.right;
+        }
+    }
+
+
+
+
     public List<Integer> postorderTraversal(TreeNode root) {
     	List<Integer> res = new ArrayList<Integer>();
     	if(root == null){	return res;}

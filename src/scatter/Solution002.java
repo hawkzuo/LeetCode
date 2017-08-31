@@ -1,8 +1,10 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 public class Solution002 {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {        
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode p1 = l1;   ListNode p2 = l2;   
         ListNode dummy = new ListNode(-1);  ListNode prev = dummy;       
         int carry = 0;

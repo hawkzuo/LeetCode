@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 public class Solution086 {
 
     public ListNode partition(ListNode head, int x) {

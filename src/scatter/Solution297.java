@@ -1,4 +1,6 @@
 package scatter;
+import collectionUtils.TreeNode;
+
 import java.util.*;
 public class Solution297 {
 

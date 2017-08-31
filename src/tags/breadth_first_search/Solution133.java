@@ -2,6 +2,8 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.UndirectedGraphNode;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;

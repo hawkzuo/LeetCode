@@ -2,7 +2,9 @@
 
 package tags.breadth_first_search;
 
-public class Solution270 {    
+import collectionUtils.TreeNode;
+
+public class Solution270 {
     public int closestValue(TreeNode root, double target) {
         int bigger = root.val;
         int smaller = root.val;

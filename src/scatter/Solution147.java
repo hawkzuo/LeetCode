@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 import java.util.PriorityQueue;
 
 public class Solution147 {

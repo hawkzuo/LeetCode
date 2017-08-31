@@ -1,5 +1,7 @@
 package scatter;
 
+import collectionUtils.ListNode;
+
 public class Solution369 {
 
     public ListNode plusOne(ListNode head) {

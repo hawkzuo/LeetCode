@@ -1,5 +1,7 @@
 package trie;
 
+import collectionUtils.TrieNode;
+
 import java.util.*;
 
 public class Trie {
@@ -7,7 +9,7 @@ public class Trie {
     int size;
     /** Initialize your data structure here. */
     public Trie() {
-        root = new TrieNode("");
+        root = new TrieNode(null);
         size = 0;
     }
     /** Inserts a word into the trie. */

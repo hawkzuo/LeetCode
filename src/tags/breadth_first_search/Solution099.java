@@ -2,8 +2,10 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.TreeNode;
+
 public class Solution099 {
-    private TreeNode  e1=null;
+    private TreeNode e1=null;
     private TreeNode  e2=null;
     private TreeNode prev=new TreeNode(Integer.MIN_VALUE);
 	public void recoverTree(TreeNode root) {

@@ -2,6 +2,8 @@
 
 package tags.breadth_first_search;
 
+import collectionUtils.TreeNode;
+
 public class Solution105 {
 
 	public Solution105() {

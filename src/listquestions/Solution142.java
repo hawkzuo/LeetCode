@@ -1,5 +1,7 @@
 package listquestions;
 
+import collectionUtils.ListNode;
+
 import java.util.HashMap;
 
 public class Solution142 {

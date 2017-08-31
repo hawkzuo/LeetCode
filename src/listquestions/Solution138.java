@@ -1,5 +1,7 @@
 package listquestions;
 
+import collectionUtils.RandomListNode;
+
 import java.util.HashMap;
 import java.util.Map;
 

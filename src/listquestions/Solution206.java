@@ -1,5 +1,7 @@
 package listquestions;
 
+import collectionUtils.ListNode;
+
 public class Solution206 {
 
 	public Solution206() {

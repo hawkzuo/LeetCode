@@ -1,6 +1,9 @@
 //298. Binary Tree Longest Consecutive Sequence
 
 package tags.breadth_first_search;
+
+import collectionUtils.TreeNode;
+
 /*
 public class Solution298 {
 
