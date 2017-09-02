@@ -8,8 +8,8 @@ import java.util.Deque;
  * Min Stack
  */
 public class Sol155MinStack {
-    int min = Integer.MAX_VALUE;
-    Deque<Integer> stack = new ArrayDeque<>();
+    private int min = Integer.MAX_VALUE;
+    private Deque<Integer> stack = new ArrayDeque<>();
 
     public void push(int x) {
         if(x <= min){

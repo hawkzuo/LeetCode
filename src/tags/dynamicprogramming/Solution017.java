@@ -9,7 +9,7 @@ public class Solution017 {
 
     public List<String> letterCombinations(String digits) {
         
-        List<String> res = new ArrayList<String>();
+        List<String> res = new ArrayList<>();
 
         for(int i=0;i<digits.length();i++){
             if(digits.charAt(i)-'2' < 0 || digits.charAt(i)-'9' > 0  ){

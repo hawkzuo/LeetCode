@@ -4,6 +4,8 @@ import collectionUtils.Sol;
 
 /**
  * Created by Amos on 2017/7/13.
+ * All 100 questions except:
+ * Q157
  */
 public class TestBuilder {
 
@@ -12,6 +14,7 @@ public class TestBuilder {
         Sol s = new Sol();
         int[] A = {};
         int[] B = {};
+
         StringBuilder sb = new StringBuilder();
         System.out.println();
     }
