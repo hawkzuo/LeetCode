@@ -12,10 +12,10 @@ public class Sol145 {
     // Idea: Three ways to solve this problem
     // Key is to know the flow how post-order works
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
         if(root == null){	return res;}
 
-        Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         pushRight(res, root, stack);
 
         while(!stack.isEmpty()){
@@ -34,7 +34,6 @@ public class Sol145 {
             cur = cur.right;
         }
     }
-
 
     public List<Integer> postorderTraversalMethod2(TreeNode root) {
         LinkedList<Integer> ans = new LinkedList<>();
@@ -56,10 +55,10 @@ public class Sol145 {
     }
 
     public List<Integer> postorderTraversalOld(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
         if(root == null){	return res;}
 
-        Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);	res.add(root.val);
         boolean down = true;
 
@@ -73,7 +72,7 @@ public class Sol145 {
                     down = true;
                 }else{
                     down=false;
-                    //This line is redunant and it causes problems
+                    //This line is redundant and it causes problems
                     //stack.pop();
                 }
 
@@ -93,9 +92,4 @@ public class Sol145 {
         Collections.reverse(res);
         return res;
     }
-
-
-
-
-
 }

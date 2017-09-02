@@ -1,4 +1,4 @@
-package collectionMediumFirstHundred;
+package collectionMediumSecondHundred;
 
 import java.util.*;
 
