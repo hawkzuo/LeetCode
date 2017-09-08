@@ -1,5 +1,7 @@
 package collectionACompanies.facebook;
 
+import collectionUtils.NestedInteger;
+
 import java.util.*;
 /**
  * // This is the interface that allows for creating nested lists.
@@ -80,7 +82,7 @@ public class NestedIterator implements Iterator<Integer> {
 }
 
 /**
- * Your NestedIterator object will be instantiated and called as such:
- * NestedIterator i = new NestedIterator(nestedList);
+ * Your Sol341NestedIterator object will be instantiated and called as such:
+ * Sol341NestedIterator i = new Sol341NestedIterator(nestedList);
  * while (i.hasNext()) v[f()] = i.next();
  */

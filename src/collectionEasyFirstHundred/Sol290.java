@@ -9,6 +9,7 @@ import java.util.Map;
  */
 public class Sol290 {
     // Idea: bijecture meaning 1-on-1 matching
+    //  Establish pattern -> word connection
     public boolean wordPattern(String pattern, String str) {
         if(pattern == null || pattern.length() == 0) {  return false;   }
         String[] words = str.split("\\s");
