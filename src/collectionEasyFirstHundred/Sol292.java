@@ -4,8 +4,12 @@ package collectionEasyFirstHundred;
  * Created by Amos on 2017/9/7.
  * Nim Game
  */
-public class Sol292TLE {
+public class Sol292 {
     // Idea:    MinMax  1 -> P1 win  -1 -> P2 win   If nothing to remove => Current user will lose
+    // This problem has a super easy pattern:
+    public boolean canWinNim(int n) {
+        return n % 4 != 0 ;
+    }
     //  Trial-1: top-down DP    heap overflow
     //  Trial-2: bottom-up DP   heap overflow
     //  Trial-3: bottom-up with optimize    => TLE
@@ -63,7 +67,7 @@ public class Sol292TLE {
     }
 
     public static void main(String[] args) {
-        Sol292TLE s = new Sol292TLE();
+        Sol292 s = new Sol292();
         int[] A = {};
         int[] B = {};
 
