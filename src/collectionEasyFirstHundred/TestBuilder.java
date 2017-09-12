@@ -4,7 +4,7 @@ import collectionUtils.Sol;
 
 /**
  * Created by Amos on 2017/7/13.
- * All 100 questions except:
+ * All 100 questions except 1:
  * Q157
  */
 public class TestBuilder {

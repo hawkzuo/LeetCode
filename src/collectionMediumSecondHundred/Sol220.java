@@ -9,7 +9,8 @@ import java.util.TreeSet;
 public class Sol220 {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
         // Brute Time: O(Nk)
-        // Idea: TreeSet stores at most k elements
+        // Idea: Sliding Window
+        //       TreeSet stores at most k elements
         //       For each A[i], check its floor and ceil in the Set and see if there exists
         //       elements of Set satisfies value \in [A[i]-t, A[i]+t]
         // Running Time: O(Nlogk)

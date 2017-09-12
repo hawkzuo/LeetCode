@@ -44,6 +44,7 @@ public class Sol216 {
         if(path.size() < maxLen) {
             if(leftover <= 0) { return;}
             int lastNumber = path.get(path.size()-1);
+            // Guarantees each next step number is larger than previous one => Remove duplicates
             for(int i=lastNumber + 1;i<=9;i++) {
                 path.add(i);
                 generateAns(result, path, leftover - i, maxLen);

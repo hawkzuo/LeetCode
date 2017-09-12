@@ -5,7 +5,8 @@ package collectionMediumSecondHundred;
  * House Robber II
  */
 public class Sol213 {
-    // Idea: compare max    dp will be analyzed separately
+    // Idea: compare max
+    // TODO: dp will be analyzed separately
     public int rob(int[] nums) {
         int len = nums.length;
         if(len <=3){
