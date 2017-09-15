@@ -50,7 +50,8 @@ public class Solution224 {
     			cursor++;
     		}
     	}
-    	StringBuilder res = evaluate(sb.toString());    	
+    	StringBuilder res = evaluate(sb.toString());
+
     	return res;   	
     }
     
