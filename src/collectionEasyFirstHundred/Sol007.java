@@ -7,6 +7,7 @@ package collectionEasyFirstHundred;
 public class Sol007 {
     public int reverse(int x) {
         StringBuilder sb = new StringBuilder();
+        // Append first then reverse to avoid Overflow
         sb.append(x);
         boolean isPositive = true;
         if(sb.charAt(0) == '-') {

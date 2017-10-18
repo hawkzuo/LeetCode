@@ -26,6 +26,7 @@ public class Sol005 {
                     }
                 }
             }
+            System.out.println();
         }
         return s.substring(leftIndex,rightIndex);
     }

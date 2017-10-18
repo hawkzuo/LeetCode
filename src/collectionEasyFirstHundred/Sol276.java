@@ -11,6 +11,16 @@ public class Sol276 {
     //  Another stores among these choices, what amount of choices already have 2 consequent colors
     //  And bottom-up generate the answer
     // This version has already optimized space cost to O(n) from O(nk)
+    public static void main(String[] args) {
+        Sol276 s = new Sol276();
+        int[] A = {};
+        int[] B = {};
+
+        StringBuilder sb = new StringBuilder();
+        System.out.println(s.numWays(4,3));
+    }
+
+
     public int numWays(int n, int k) {
         int[] dp = new int[n+1];
         if(n == 0 || k == 0) {

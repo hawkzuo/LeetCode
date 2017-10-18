@@ -1,6 +1,7 @@
 package collectionEasyFirstHundred;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Amos on 2017/8/23.
@@ -44,6 +45,28 @@ public class Sol001 {
         res[0] = 0;   res[1] = 0;
         return res;
     }
+
+
+    // 1018 version
+    public int[] twoSum3(int[] nums, int target) {
+        Map<Integer, Integer> container = new HashMap<>();
+        int[] result = new int[2];
+
+        for(int i=0; i<nums.length; i++) {
+
+            if(container.containsKey(target - nums[i])) {
+                result[0] = i;
+                result[1] = container.get(target - nums[i]);
+                return result;
+            } else {
+                container.put(nums[i], i);
+            }
+        }
+
+        return result;
+    }
+
+
 
 
 

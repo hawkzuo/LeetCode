@@ -7,7 +7,7 @@ public class Solution336 {
         if(words == null || words.length == 0){  return result;}
         //Double everything on Initialization
         Map<String,Integer> table = new HashMap<String,Integer>();
-        Map<String,Integer> rtable = new HashMap<String,Integer>();
+        Map<String,Integer> reversedTable = new HashMap<String,Integer>();
         Trie rtree = new Trie();
         int nullIndex = -1;
         for(int i=0;i<words.length;i++){
@@ -17,7 +17,7 @@ public class Solution336 {
                 nullIndex = i;
             }else{
                 String currev = new StringBuilder(cur).reverse().toString();
-                table.put(cur,i);   rtable.put(currev,i);
+                table.put(cur,i);   reversedTable.put(currev,i);
                 rtree.insert(currev);                
             }
         }
@@ -36,7 +36,7 @@ public class Solution336 {
                     //Check Palindrome
                 	if(checkPalindrome(str.substring(cursor+1,len))){
                         List<Integer> dummy = new ArrayList<Integer>();
-                        int rIndex = rtable.get(toCheck);
+                        int rIndex = reversedTable.get(toCheck);
                         //Bug correction    --Case:distinct pair
                         if(lIndex != rIndex){
                             dummy.add(lIndex);  dummy.add(rIndex);
@@ -52,7 +52,7 @@ public class Solution336 {
                 if(bigLen-len == 1 || checkPalindrome(possible.substring(len,bigLen)) ){
                     //Found
                     List<Integer> dummy = new ArrayList<Integer>();
-                    int rIndex = rtable.get(possible);
+                    int rIndex = reversedTable.get(possible);
                     dummy.add(lIndex);  dummy.add(rIndex);
                     result.add(dummy);
                 }

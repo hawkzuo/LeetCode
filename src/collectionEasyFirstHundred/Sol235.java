@@ -65,6 +65,7 @@ public class Sol235 {
     }
 
     // Idea: Use Recursive Calls
+    // This method requires both p & q to be int the Tree Structure.
     // Much like post-order visit, but require a little bit more thinking
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // p && q are global variables, if encountered just return them, otherwise, use recursively find LCA
