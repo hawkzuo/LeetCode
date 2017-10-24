@@ -21,7 +21,7 @@ public class Sol037 {
             cols[i] = new HashSet<Character>();
             towns[i] = new HashSet<Character>();
         }
-        // Init
+        // Initialize
         for(int i=0; i< 9; i++) {
             for(int j=0; j<9; j++) {
                 char step = board[i][j];
@@ -31,9 +31,11 @@ public class Sol037 {
                 }
             }
         }
+        // BT searching process
         fillBoard(0, 0, board, rows, cols, towns);
     }
 
+    // Main-Process
     private boolean fillBoard(int x, int y, char[][] board, Set[] rows, Set[] cols, Set[] towns) {
         if(x >= 9) {    return true; }
 
@@ -47,7 +49,9 @@ public class Sol037 {
                 if (!rows[x].contains(next) && !cols[y].contains(next) && !towns[getTownNumber(x, y)].contains(next)) {
                     board[x][y] = next;
                     rows[x].add(next);  cols[y].add(next); towns[getTownNumber(x, y)].add(next);
-                    boolean res = y == 8 ? fillBoard(x + 1, 0, board, rows, cols, towns) : fillBoard(x, y + 1, board, rows, cols, towns);
+                    boolean res = y == 8 ?
+                            fillBoard(x + 1, 0, board, rows, cols, towns) :
+                            fillBoard(x, y + 1, board, rows, cols, towns);
                     // BT
                     if (res) {
                         return true;
